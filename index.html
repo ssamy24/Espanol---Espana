@@ -1,70 +1,60 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" prefix="og: https://ogp.me/ns#">
 <head>
+    <!-- Metadatos básicos -->
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explora contenido exclusivo sobre la diversidad cultural de Cataluña y Andalucía.">
 
-    <!-- Metatags básicos -->
-    <title>Catalanas y Andaluzas</title>
-    <meta name="description" content="¿Te Agradaría Verme?">
-
-    <!-- Open Graph (Facebook) -->
-    <meta property="og:title" content="Catalanas y Andaluzas">
-    <meta property="og:description" content="Este contenido es exclusivo">
+    <!-- Open Graph Tags (Fundamental para Facebook) -->
+    <meta property="og:title" content="Catalanas y Andaluzas - Cultura y Tradiciones">
+    <meta property="og:description" content="Descubre contenido exclusivo sobre cultura catalana y andaluza.">
     <meta property="og:image" content="https://i.postimg.cc/4ddgHyzp/k4odexzqe.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://cjdcabh.pixls.one/p/LvIuf">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Catalanas y Andaluzas">
+    <meta property="og:locale" content="es_ES">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Catalanas y Andaluzas - Cultura y Tradiciones">
+    <meta name="twitter:description" content="Descubre contenido exclusivo sobre cultura catalana y andaluza.">
+    <meta name="twitter:image" content="https://i.postimg.cc/4ddgHyzp/k4odexzqe.jpg">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="https://cdn.jmpcdn.com/assets/3420/images/2.ico" type="image/x-icon">
-
-    <!-- Scripts y estilos -->
-    <script id="_wauy5a">var _wau = _wau || []; _wau.push(["dynamic", "5bj8a04lfn", "y5a", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
-    <script src="https://cdn.smrt-content.com/assets/1004/js/jquery.min.js" defer></script>
-    <script src="https://cdn.smrt-content.com/assets/1004/js/device.min.js" defer></script>
-    <script src="https://cdn.smrt-content.com/assets/1004/js/custom.js" defer></script>
-    <script src="https://cdn.smrt-content.com/assets/1004/js/backoffer.js" defer></script>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
     <!-- Estilos optimizados -->
     <style>
-        :root {
-            --color-primary: white;
-            --color-secondary: rgba(255, 255, 255, 0.1);
-            --border-radius: 5px;
-        }
-
-        body, html {
+        /* Reset básico */
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
+        }
+
+        body {
             font-family: Arial, sans-serif;
-            background: #000;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+            padding: 20px;
+            overflow-x: hidden;
         }
 
         .wrap {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            z-index: 2;
+            max-width: 600px;
+            margin: 0 auto;
             text-align: center;
-            padding: 20px;
-            color: var(--color-primary);
         }
 
         .step-block {
             background: rgba(0, 0, 0, 0.7);
             padding: 20px;
-            border-radius: var(--border-radius);
-            margin: 0 auto;
-            max-width: 90%;
+            border-radius: 5px;
+            margin-bottom: 20px;
         }
 
         .logo img {
@@ -81,26 +71,30 @@
             display: flex;
             justify-content: space-around;
             gap: 10px;
+            flex-wrap: wrap;
         }
 
         .step-btn {
-            padding: 10px 20px;
-            border: 2px solid var(--color-primary);
-            border-radius: var(--border-radius);
+            padding: 12px 20px;
+            border: 2px solid #fff;
+            border-radius: 5px;
             cursor: pointer;
             font-size: 1em;
-            color: var(--color-primary);
-            background-color: transparent;
+            color: #fff;
+            background: transparent;
             transition: background-color 0.3s ease;
-            text-align: center;
             text-decoration: none;
-            display: inline-block;
-            flex: 1;
-            min-width: 100px;
+            flex: 1 1 45%;
+            min-width: 120px;
         }
 
         .step-btn:hover {
-            background-color: var(--color-secondary);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .external-link::after {
+            content: " 🔗";
+            font-size: 0.8em;
         }
 
         video#VideoBg {
@@ -111,44 +105,23 @@
             min-height: 100%;
             width: auto;
             height: auto;
-            z-index: 0;
+            z-index: -1;
             transform: translate(-50%, -50%);
             object-fit: cover;
         }
 
-        @media (max-width: 767px) {
+        @media (max-width: 768px) {
             .step-btn {
-                padding: 8px 16px;
-                font-size: 0.9em;
-                min-width: 80px;
-            }
-            .step-block {
-                max-width: 90%;
-            }
-        }
-
-        @media (min-width: 768px) and (max-width: 1023px) {
-            .step-btn {
-                padding: 12px 24px;
-                font-size: 1em;
-                min-width: 120px;
-            }
-            .step-block {
-                max-width: 600px;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .step-btn {
-                padding: 15px 30px;
-                font-size: 1.1em;
-                min-width: 150px;
-            }
-            .step-block {
-                max-width: 800px;
+                flex: 1 1 100%;
             }
         }
     </style>
+
+    <!-- Scripts seguros -->
+    <script src="https://cdn.smrt-content.com/assets/1004/js/jquery.min.js" defer></script>
+    <script src="https://cdn.smrt-content.com/assets/1004/js/device.min.js" defer></script>
+    <script src="https://cdn.smrt-content.com/assets/1004/js/custom.js" defer></script>
+    <script src="https://cdn.smrt-content.com/assets/1004/js/backoffer.js" defer></script>
 </head>
 <body>
     <div class="wrap">
@@ -156,38 +129,51 @@
             <div class="logo">
                 <img src="https://i.postimg.cc/3RBGjJRG/vt6pjvkiz.png" alt="Catalanas y Andaluzas">
             </div>
-            <div class="step-item" style="display: block;">
+            <div class="step-item">
                 <div class="question-title">
                     ¿Te Agradaría Verme?
                 </div>
                 <div class="buttons-block">
-                    <div class="step-btn no-btn tr-next-button tr-b-option" role="button" aria-label="Sí">Sí</div>
-                    <div class="step-btn yes-btn tr-next-button tr-b-option" role="button" aria-label="No">No</div>
+                    <button class="step-btn">Sí</button>
+                    <button class="step-btn">No</button>
                 </div>
             </div>
             <div class="step-item thishide" style="display: none;">
                 <div class="question-title">
                     ¡ADVERTENCIA! Esta Chica no Acepta personas menores de 25
                 </div>
-                <p><b style="color: red;"></b></p>
                 <div class="buttons-block">
-                    <a href="https://cjdcabh.pixls.one/p/LvIuf" class="step-btn submit-btn tr-submit-button showmail">ACEPTAR</a>
+                    <a href="https://cjdcabh.pixls.one/p/LvIuf" 
+                       class="step-btn external-link" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                        ACEPTAR
+                    </a>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Video de fondo -->
     <video autoplay muted loop id="VideoBg" preload="auto">
         <source src="https://archive.org/download/yymcvbjfa/yymcvbjfa.mp4" type="video/mp4">
-        <source src="chemin/vers/video.webm" type="video/webm">
-        <source src="chemin/vers/video.ogv" type="video/ogg">
         Tu navegador no soporta la etiqueta de video.
     </video>
-    <script type="text/javascript">
-        /*<![CDATA[*/
-        (function(w) {
-            w.backOfferUrl = '';
-        }(window));
-        /*]]>*/
+
+    <!-- Script de interacción -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const buttons = document.querySelectorAll(".step-btn:not(.external-link)");
+            const stepItem1 = document.querySelectorAll(".step-item")[0];
+            const stepItem2 = document.querySelectorAll(".step-item")[1];
+
+            buttons.forEach(button => {
+                button.addEventListener("click", () => {
+                    stepItem1.style.display = "none";
+                    stepItem2.style.display = "block";
+                });
+            });
+        });
     </script>
 </body>
 </html>
